@@ -6,7 +6,7 @@ public class Truck{
     private double maxWeight;
     private double maxVolume;
     private Arraylist<Package> pack;
-    private int hoursUsed
+    private int hoursUsed;
 
     private static final int smallTruck=1;
     private static final int medTruck=2;
@@ -24,7 +24,7 @@ public class Truck{
 
 //constructors
 public Truck (){
-    setPackID();
+    setTruckID();
     setCurrentWeight();
     setCurrentVolume();
     setMaxWeight();
@@ -34,7 +34,7 @@ public Truck (){
 }
 //non default constructor 
 public Truck(double newCurrentWeight, double newCurrentVolume, double newMaxWeight, double newMaxVolume,  int newHoursUsed){
-    setPackID();
+    setTruckID();
     setCurrentWeight(newCurrentWeight);
     setCurrentVolume(newCurrentVolume);
     setMaxWeight(newMaxWeight);
@@ -44,8 +44,8 @@ public Truck(double newCurrentWeight, double newCurrentVolume, double newMaxWeig
 }
 
 //getters
-public int getPackID(){
-    return packID;
+public int getTruckID(){
+    return truckID;
 }
 
 public double getCurrentWeight(){
@@ -69,7 +69,54 @@ public ArraryList<Package> getPack(){
 }
 
 public int getHoursUsed(){
-    return hoursUsed
+    return hoursUsed;
 }
 
+//setters 
+public void setTruckID(){
+    truckID= nextID++;
+}
+
+public void setCurrentWeight(double newCurrentWeight){
+    if(newCurrentWeight>=0){
+        currentWeight=newCurrentWeight;
+    }
+    else{
+        currentWeight=0;
+    }
+    }
+
+public void setCurrentVolume(double newCurrentVolume){
+    if(newCurrentVolume>=0){
+        currentVolume=newCurrentVolume;
+    }
+    else{
+        currentVolume=0;
+    }
+    }
+
+public void setMaxWeight(double newMaxWeight){
+    if()
+
+}
+
+public void setMaxVolume(double newMaxVolume){
+
+
+}
+
+public void setPack(ArrayList<Package> newPack){
+
+
+}
+
+public void setHoursUsed(int newHoursUsed){
+
+
+}
+
+public void setHoursUsed(){
+
+
+}
 }

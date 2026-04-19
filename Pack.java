@@ -47,7 +47,7 @@ public String getCompName(){
     return compName;
 }
 
-public String getDeleveryZone(){
+public String getDeliveryZone(){
     return deliveryZone;
 }
 
@@ -112,7 +112,7 @@ public void setVolume(int newVolume){
 }
     public int compareTo(Pack other) {
 
-        int zoneCompare = this.getDeleveryZone().compareTo(other.getDeleveryZone());
+        int zoneCompare = this.getDeliveryZone().compareTo(other.getDeliveryZone());
         if (zoneCompare != 0) {
             return zoneCompare;
         }
@@ -121,7 +121,7 @@ public void setVolume(int newVolume){
 }
 
 public String toString(){
-    return "ID:"+ getPackID()+ " Company:"+getCompName()+ " Zone:"+ getDeleveryZone()+ " Date:"+ getDeliveryDate()+" Weight:"+ getWeight()+ " Volume:"+getVolume();
+    return "ID:"+ getPackID()+ " Company:"+getCompName()+ " Zone:"+ getDeliveryZone()+ " Date:"+ getDeliveryDate()+" Weight:"+ getWeight()+ " Volume:"+getVolume();
 }
 
 public int getTime(){
