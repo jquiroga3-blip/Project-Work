@@ -1,12 +1,13 @@
 public class Truck{
     //attributes and constants 
     private int truckID;
-    private double currentWeight;
+    private double currentWeight;// this depends on the packages added to the truck along with the volume
     private double currentVolume;
     private double maxWeight;
-    private double maxVolume;
-    private Arraylist<Package> pack;
-    private int hoursUsed;
+    private double maxVolume;//this and the max weight is determined by the truck used 
+    private Arraylist<Pack> pack;
+    private int hoursUsed;// this will get calculated and updated 
+    
 
     private static final int smallTruck=1;
     private static final int medTruck=2;
@@ -30,17 +31,17 @@ public Truck (){
     setMaxWeight();
     setMaxVolume();
     setPack(new ArrayList<>());
-    setHoursUsed();
+    //setHoursUsed();
 }
 //non default constructor 
-public Truck(double newCurrentWeight, double newCurrentVolume, double newMaxWeight, double newMaxVolume,  int newHoursUsed){
+public Truck(double newCurrentWeight, double newCurrentVolume, double newMaxWeight, double newMaxVolume){
     setTruckID();
     setCurrentWeight(newCurrentWeight);
     setCurrentVolume(newCurrentVolume);
     setMaxWeight(newMaxWeight);
     setMaxVolume(newMaxVolume);
     //setPack(new ArrayList<>());
-    setHoursUsed(newHoursUsed);
+    //setHoursUsed(newHoursUsed);
 }
 
 //getters
@@ -68,16 +69,17 @@ public ArraryList<Package> getPack(){
     return pack;
 }
 
-public int getHoursUsed(){
+/*public int getHoursUsed(){
     return hoursUsed;
 }
+    */
 
 //setters 
 public void setTruckID(){
     truckID= nextID++;
 }
 
-public void setCurrentWeight(double newCurrentWeight){
+/*public void setCurrentWeight(double newCurrentWeight){
     if(newCurrentWeight>=0){
         currentWeight=newCurrentWeight;
     }
@@ -94,29 +96,50 @@ public void setCurrentVolume(double newCurrentVolume){
         currentVolume=0;
     }
     }
-
+*/
 public void setMaxWeight(double newMaxWeight){
-    if()
-
+    if(newMaxWeight>=0){
+        maxWeight=newMaxWeight;
+    }
+    else{//if the input is invalid, set the max weight to 0     
+        maxWeight=0;//might have to add the condictions depending on what truck is used 
+    }
 }
 
 public void setMaxVolume(double newMaxVolume){
+    if(newMaxVolume>=0){
+        maxVolume=newMaxVolume;
+    }
+    else{
+        maxVolume=0;
+    }
+    }
 
-
-}
-
-public void setPack(ArrayList<Package> newPack){
-
-
+public void setPack(ArrayList<Pack> newPack){
+    if(newPack==null){
+        pack=new ArrayList<>();
+    }
+    else{
+        pack=newPack;
+    }
 }
 
 public void setHoursUsed(int newHoursUsed){
-
-
+    if(newHoursUsed>=0){
+        hours=newHoursUsed;
+    }
+    else{
+        hoursUsed=0;
+    }
 }
 
-public void setHoursUsed(){
-
-
+//methods needed 
+public boolean addPackage (Package newPack){
+    if(newPack==null){
+        return false;
+    } 
+    else if()
+    }
 }
+
 }
