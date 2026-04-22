@@ -134,17 +134,30 @@ public int calculateHoursUsed(){
         return 0;
     }
     //now we have to sort through the companies and the zones 
-    ArrayList<String> zones= new ArrayList();// here we make a place to store the zones from the packages 
+    ArrayList<String> zones= new ArrayList<>();// here we make a place to store the zones from the packages 
     ArrayList<ArrayList<String>> companiesInZone= new ArrayList<>();// this is a list in a list, so based on the zone, the companies are listed under (2-D Array)
     
     for(Pack p: pack){
         String zone= p.getDeliveryZone();
         String company= p.getCompName();
-
+//remember we are using an array list so we can use those methods and such
         int index= zones.indexOf(zone);// this is to check if the zone is already listed 
-        if()
-
+        if(index==-1){
+            zones.add(zone);// to add the zone not on the list to the list 
+            ArrayList<String> newZoneList = new ArrayList<>(); 
+            newZoneList.add(company);
+            companiesInZone.add(newZoneList);   
+        }
+        else{// this is if the zone is already in the list sop we just add the company under that zone 
+            ArrayList<String> currentZoneList= companiesInZone.get(index);
+            if(!currentZoneList.contains(company)){// saying is the comp is not on their then add it 
+                currentZoneList.add(company);
+            }
+        }
     }
+    //now based on this we can do the hours used calculation 
+
+
 }
 
 
