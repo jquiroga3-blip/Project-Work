@@ -7,7 +7,7 @@ public class Truck{
     private double currentVolume;
     private double maxWeight;
     private double maxVolume;//this and the max weight is determined by the truck used 
-    private Arraylist<Pack> pack;
+    private ArrayList<Pack> pack;
     private int hoursUsed;// this will get calculated and updated 
     private int companiesStoppedAt;
     
@@ -22,22 +22,22 @@ public Truck (){
     setTruckID();
     setTruckType(smallTruck); //the default truck is small 
 
-    setCurrentWeight(0);
-    setCurrentVolume(0);
+    currentWeight=0;
+    currentVolume=0;
     
     setPack(new ArrayList<>());
-    setHoursUsed(0);
+    hoursUsed=0;
 }
 //non default constructor 
 public Truck(int newTruckType){
     setTruckID();
     setTruckType(newTruckType);
 
-    setCurrentWeight(0);
-    setCurrentVolume(0);
-    
+    currentWeight=0;
+    currentVolume=0;
+
     setPack(new ArrayList<>());
-    setHoursUsed(0);
+    hoursUsed=0;
 }
 
 //getters
@@ -61,12 +61,16 @@ public double getMaxVolume(){
     return maxVolume;
 }*/
 
-public ArraryList<Package> getPack(){
+public ArraryList<Pack> getPack(){
     return pack;
 }
 
 public int getHoursUsed(){
     return hoursUsed;
+}
+
+public int getTruckType(){
+    return truckType;
 }
 
 //setters 
@@ -97,24 +101,6 @@ public void setTruckType(int newTruckType){
     }
  }
 
-public void setCurrentWeight(double newCurrentWeight){
-    if(newCurrentWeight>=0){
-        currentWeight=newCurrentWeight;
-    }
-    else{
-        currentWeight=0;
-    }
-}
-
-public void setCurrentVolume(double newCurrentVolume){
-    if(newCurrentVolume>=0){
-        currentVolume=newCurrentVolume;
-    }
-    else{
-        currentVolume=0;
-    }
- }
-
 public void setPack(ArrayList<Pack> newPack){
     if(newPack==null){
         pack=new ArrayList<>();
@@ -124,21 +110,14 @@ public void setPack(ArrayList<Pack> newPack){
     }
 }
 
-public void setHoursUsed(int newHoursUsed){
-    if(newHoursUsed>=0){
-        hoursUsed=newHoursUsed;
-    }
-    else{
-        hoursUsed=0;
-    }
-}
 
 //methods needed 
-public boolean addPackage (Package newPack){
+public boolean addPackage (Pack newPack){
     if(newPack==null){
         return false;
     } 
-    else if(newPack.getWeight()+currentWeight<maxWeight && newPack.getVolume()+currentVolume<maxVolume){
+    else if(newPack.getWeight()+currentWeight<=maxWeight && 
+            newPack.getVolume()+currentVolume<=maxVolume){
         pack.add(newPack);
         setCurrentWeight(currentWeight+ newPack.getWeight());
         setCurrentVolume( currentVolume+ newPack.getVolume());
@@ -150,8 +129,26 @@ public boolean addPackage (Package newPack){
 }
 
 public int calculateHoursUsed(){
-    hoursUsed=0;
-    for(int i=0;  ){
+    if(pack.size()==0){
+        hoursUsed=0;//no packs no hours 
+        return 0;
+    }
+    //now we have to sort through the companies and the zones 
+    ArrayList<String> zones= new ArrayList();// here we make a place to store the zones from the packages 
+    ArrayList<ArrayList<String>> companiesInZone= new ArrayList<>();// this is a list in a list, so based on the zone, the companies are listed under (2-D Array)
+    
+    for(Pack p: pack){
+        String zone= p.getDeliveryZone();
+        String company= p.getCompName();
+
+        int index= zones.indexOf(zone);// this is to check if the zone is already listed 
+        if()
+
+    }
+}
+
+
+    
 
     }
 } 
