@@ -61,7 +61,7 @@ public double getMaxVolume(){
     return maxVolume;
 }*/
 
-public ArraryList<Pack> getPack(){
+public ArrayList<Pack> getPack(){
     return pack;
 }
 
@@ -119,8 +119,8 @@ public boolean addPackage (Pack newPack){
     else if(newPack.getWeight()+currentWeight<=maxWeight && 
             newPack.getVolume()+currentVolume<=maxVolume){
         pack.add(newPack);
-        setCurrentWeight(currentWeight+ newPack.getWeight());
-        setCurrentVolume( currentVolume+ newPack.getVolume());
+        currentWeight= currentWeight+ newPack.getWeight();
+        currentVolume= currentVolume+ newPack.getVolume();
         return true;
     }
     else{
@@ -156,15 +156,25 @@ public int calculateHoursUsed(){
         }
     }
     //now based on this we can do the hours used calculation 
-
-
+    int hours=0;
+    for(int i=0; i< zones.size(); i++){
+        int numCompanies= companiesInZone.get(i).size();
+        int stopsMade= 5-i;
+        if(stopsMade < 1){
+        stopsPerHour = 1;
+        }
+        int hoursForZone=0;
+        while(numCompanies >0){
+            numCompanies= numCompanies-stopsMade;
+            hoursForZone++;
+        }
+        hours= hours+ hoursForZone;
+    }    
+    hoursUsed=hours;
+    return hours;
 }
-
-
-    
 
     }
-} 
-}
+
 
 
