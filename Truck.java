@@ -1,3 +1,5 @@
+import java.util.*;
+import java.io.*;
 public class Truck{
     //attributes and constants 
     private int truckID;
@@ -174,7 +176,11 @@ public int calculateHoursUsed(){
     return hours;
 }
 
-    }
+public String toString(){
+    return "Truck ID: "+ truckID + " Truck Type: "+ truckType + "\nCurrent Weight: "+ currentWeight + " Current Volume: "+ currentVolume + "\nHours Used: "+ hoursUsed;
+}
+
+}
 
 
 
