@@ -15,7 +15,7 @@ public class PackageCollection {
 		ArrayList<Pack> data= new ArrayList<>(); // creating the array where the packages/specpac will be stored
 
 		//now we must add it to the Pack object while the file has more values
-		while(readFile.hasNext()){
+		while(readFile.hasNextLine()){
 			// we put this inside the loop bc we want it for one line at a time not the whole thing 
 			String stringFile= readFile.nextLine();// this will store the file contents into a string
 			String [] stringData = stringFile.split(",");// this will split the file contents by the comma 
@@ -23,8 +23,8 @@ public class PackageCollection {
 		//remember we need the date objects not string 
 		String dateValues[]= stringData[3].split("/");
 		int month = Integer.parseInt(dateValues[0]);
-		int year= Integer.parseInt(dateValues[1]);
-		int day= Integer.parseInt(dateValues[2]);
+		int day= Integer.parseInt(dateValues[1]);
+		int year= Integer.parseInt(dateValues[2]);
 
 		Date date= new Date(month, day, year);
 
