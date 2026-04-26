@@ -17,6 +17,7 @@ public class PackageDeliverySystem {
               for(Truck trucks: trucksBeingUsed){
                   if(trucks.addPackage(packages)){
                         packagesAdded=true;
+                        break;
                   }     
               }
             //here we are saying that if no packages can be added
@@ -41,11 +42,11 @@ public class PackageDeliverySystem {
         for(Truck trucks: trucksBeingUsed){
             trucks.calculateHoursUsed();//from truck class
             int truckHours=trucks.getHoursUsed();
-            if(trucks.getTruckType==1){
+            if(trucks.getTruckType()==1){
                   small++;
                   totalTruckHours= totalTruckHours+ (1*truckHours);
             }
-            else if(trucks.getTruckType==2){
+            else if(trucks.getTruckType()==2){
                   medium++;
                   totalTruckHours= totalTruckHours+ (2*truckHours);
             }
