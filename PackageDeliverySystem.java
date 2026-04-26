@@ -54,7 +54,35 @@ public class PackageDeliverySystem {
                   totalTruckHours= totalTruckHours+ (3*truckHours);
             }
         }
+
+            System.out.println("Total Truck Hours: "+ totalTruckHours+ "\nSmall Trucks: "+ small+ "\nMedium Trucks: "+ medium+ "\nLarge Trucks: "+ large);
 //now we output it 
+try{
+    FileWriter out1= new FileWriter("deliveries.txt");
+    BufferedWriter bf1= new BufferedWriter(out1);
+    for(Truck trucks: trucksBeingUsed){
+      bf1.write(trucks.toString());
+      bf1.newLine();
 
-
+      for(Pack packages: trucks.getPack()){
+            bf1.write(packages.toString());
+            bf1.newLine();
+      }
+    }
 }
+ catch(IOException IOE){
+    System.out.println(IOE);
+ }
+
+ try{
+      FileWriter out2= new FileWriter("log.txt");
+    BufferedWriter bf2= new BufferedWriter(out2);
+ }
+      catch(IOException IOE){
+      System.out.println(IOE);
+      }
+ }
+}
+
+
+    
