@@ -172,7 +172,7 @@ public int calculateHoursUsed(){
         }
         hours= hours+ hoursForZone;
     }    
-    hoursUsed=hours;
+    hoursUsed=hours;// this is the hours the truck used 
     return hours;
 }
 

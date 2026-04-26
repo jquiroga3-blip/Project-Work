@@ -9,12 +9,52 @@ public class PackageDeliverySystem {
         String fileName= in.nextLine(); 
 
         ArrayList<Pack> data= PackageCollection.readPackages(fileName);
-        ArrayList<Truck> trucksBeingUsed= new ArratList<>();
+        ArrayList<Truck> trucksBeingUsed= new ArrayList<>();
 
         // now we must add the packs to the truck by looping 
         for(Pack packages: data){
-              if(()
-        })
+            boolean packagesAdded=false;
+              for(Truck trucks: trucksBeingUsed){
+                  if(trucks.addPackage(packages)){
+                        packagesAdded=true;
+                  }     
+              }
+            //here we are saying that if no packages can be added
+            //to the truck then we have to make a new truck and then
+            //add the packages to the new truck 
+              if(!packagesAdded){
+                  Truck newTruck= new Truck();
+                  newTruck.addPackage(packages);
+                  trucksBeingUsed.add(newTruck);
+              }
+
+        }
+        //now we calculate the truck hours as said in the project and 
+        //out put to the files it said to 
+        //we add counters to make it easier to calculate the actual truckHours
+         int totalTruckHours = 0;
+
+        int small = 0;
+        int medium = 0;
+        int large = 0;
+
+        for(Truck trucks: trucksBeingUsed){
+            trucks.calculateHoursUsed();//from truck class
+            int truckHours=trucks.getHoursUsed();
+            if(trucks.getTruckType==1){
+                  small++;
+                  totalTruckHours= totalTruckHours+ (1*truckHours);
+            }
+            else if(trucks.getTruckType==2){
+                  medium++;
+                  totalTruckHours= totalTruckHours+ (2*truckHours);
+            }
+            else{
+                  large++;
+                  totalTruckHours= totalTruckHours+ (3*truckHours);
+            }
+        }
+//now we output it 
 
 
 }
