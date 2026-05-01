@@ -1,4 +1,4 @@
-javapublic class InvalidTruckException extends Exception {
+public class InvalidTruckException extends Exception {
 
     public static final String DEFAULT_MESSAGE = "Invalid truck data provided.";
     public static final String INVALID_TRUCK_TYPE = "Truck type must be 1 (small), 2 (medium), or 3 (large).";

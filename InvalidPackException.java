@@ -1,4 +1,4 @@
-public class InvalidPackException extends Exception {
+
 public class InvalidPackException extends Exception {
 
     public static final String DEFAULT_MESSAGE = "Invalid pack data provided.";

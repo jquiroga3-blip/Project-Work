@@ -90,9 +90,12 @@ try{
       FileWriter out2= new FileWriter("log.txt");
       BufferedWriter bf2= new BufferedWriter(out2);
        for(Truck trucks: trucksBeingUsed){
-            bf2.
-
-            
+            bf2.write(InvalidPackException.getInvalidPackException());
+            bf2.newLine();
+            bf2.write(InvalidSpecPackException.getInvalidSpecPackException());
+            bf2.newLine();
+            bf2.write(InvalidTruckException.getInvalidTruckException());
+            bf2.newLine();
        }
  }
       catch(IOException IOE){
