@@ -2,7 +2,7 @@ import java.util.*;
 import java.io.*;
 //import java.lang.reflect.Array;
 public class PackageDeliverySystem {
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException, InvalidSpecPackException {
        Scanner in = new Scanner(System.in);
        System.out.println("Enter file name");
               // now the package collection class can be used to read the file and create package objects to store the package in the trucks
@@ -90,11 +90,11 @@ try{
       FileWriter out2= new FileWriter("log.txt");
       BufferedWriter bf2= new BufferedWriter(out2);
        for(Truck trucks: trucksBeingUsed){
-            bf2.write(InvalidPackException.getInvalidPackException());
+            bf2.write(InvalidPackException.DEFAULT_MESSAGE);
             bf2.newLine();
-            bf2.write(InvalidSpecPackException.getInvalidSpecPackException());
+            bf2.write(InvalidSpecPackException.DEFAULT_MESSAGE);
             bf2.newLine();
-            bf2.write(InvalidTruckException.getInvalidTruckException());
+            bf2.write(InvalidTruckException.DEFAULT_MESSAGE);
             bf2.newLine();
        }
  }

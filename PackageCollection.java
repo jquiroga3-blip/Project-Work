@@ -2,7 +2,7 @@
 import java.util.*;
 import java.io.*;
 public class PackageCollection {
-	public static ArrayList<Pack> readPackages (String fileName) throws IOException{
+	public static ArrayList<Pack> readPackages (String fileName) throws IOException, InvalidSpecPackException{
 	// we dont use this anymore because it is now a method not a main class because I want to use it in the 
 	// package delivery system main class
 		//Scanner in= new Scanner(System.in);
