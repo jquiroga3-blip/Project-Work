@@ -1,0 +1,16 @@
+Truck ID: 1 Truck Type: 1
+Current Weight: 1985.0 Current Volume: 905.0
+Hours Used: 9
+ID:1 Company:Exxon Mobil Zone:F7 Date:3/14/2023 Weight:339 Volume:112
+ID:2 Company:Exxon Mobil Zone:I2 Date:3/13/2023 Weight:335 Volume:100
+ID:3 Company:Pfizer Zone:P3 Date:3/17/2023 Weight:150 Volume:45 Time:10
+ID:4 Company:United Health Group Zone:X3 Date:3/15/2023 Weight:197 Volume:114 Time:14
+ID:5 Company:JP Morgan Chase Zone:Z5 Date:3/13/2023 Weight:89 Volume:87
+ID:6 Company:Coca-Cola Company Zone:I8 Date:3/16/2023 Weight:255 Volume:149 Time:13
+ID:7 Company:Procter & Gamble Zone:V6 Date:3/13/2023 Weight:338 Volume:47
+ID:9 Company:Alphabet Class A Zone:E9 Date:3/16/2023 Weight:196 Volume:194
+ID:10 Company:Alphabet Class C Zone:P8 Date:3/15/2023 Weight:86 Volume:57
+Truck ID: 2 Truck Type: 1
+Current Weight: 332.0 Current Volume: 167.0
+Hours Used: 1
+ID:8 Company:Amazon Zone:Q9 Date:3/13/2023 Weight:332 Volume:167 Time:11

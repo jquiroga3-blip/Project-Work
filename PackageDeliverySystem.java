@@ -23,23 +23,21 @@ public class PackageDeliverySystem {
             //here we are saying that if no packages can be added
             //to the truck then we have to make a new truck and then
             //add the packages to the new truck 
-              if(!packagesAdded){
-                Truck newTruck = new Truck(1); // try SMALL first
-                if(!newTruck.addPackage(packages)){
-                newTruck = new Truck(2); // try MEDIUM
-
-                if(!newTruck.addPackage(packages)){
-                newTruck = new Truck(3); // use LARGE
-                newTruck.addPackage(packages);
-               }
-            }
-    trucksBeingUsed.add(newTruck);
-        }
+             if(!packagesAdded){
+                  Truck newTruck = new Truck(1); // SMALL first
+                         if(!newTruck.addPackage(packages)){
+                              newTruck = new Truck(2); // MEDIUM
+                         if(!newTruck.addPackage(packages)){
+                               newTruck = new Truck(3); // LARGE
+                              newTruck.addPackage(packages);
+                               }
+                        }
+                   trucksBeingUsed.add(newTruck);
+                  }
      }
         //now we calculate the truck hours as said in the project and 
         //out put to the files it said to 
         //we add counters to make it easier to calculate the actual truckHours
-
 
         //so in one zome the truck can stop at only 5 companies and if it goes to another zone
         // then in the next zone it can only stop at 4 companies
@@ -67,19 +65,23 @@ public class PackageDeliverySystem {
             }
         }
 
-            System.out.println("Total Truck Hours: "+ totalTruckHours+ "\nSmall Trucks: "+ small+ "\nMedium Trucks: "+ medium+ "\nLarge Trucks: "+ large);
-//now we output it to the files
+           System.out.println("Total Truck Hours: "+ totalTruckHours+ "\nSmall Trucks: "+ small+ "\nMedium Trucks: "+ medium+ "\nLarge Trucks: "+ large);
+
+            //now we output it to the files
 try{
     FileWriter out1= new FileWriter("deliveries.txt");
     BufferedWriter bf1= new BufferedWriter(out1);
     for(Truck trucks: trucksBeingUsed){
-      bf1.write(trucks.toString());
-      bf1.newLine();
+    bf1.write(trucks.toString());
+    bf1.newLine();
+
     for(Pack packages: trucks.getPack()){
-            bf1.write(packages.toString());
-            bf1.newLine();
-      }
+        bf1.write(packages.toString());
+        bf1.newLine();
     }
+}
+    bf1.flush();
+    bf1.close();
 }
  catch(IOException IOE){
     System.out.println(IOE);
@@ -89,14 +91,16 @@ try{
       //printing out the details of the exceptions
       FileWriter out2= new FileWriter("log.txt");
       BufferedWriter bf2= new BufferedWriter(out2);
-       for(Truck trucks: trucksBeingUsed){
+       
             bf2.write(InvalidPackException.DEFAULT_MESSAGE);
             bf2.newLine();
             bf2.write(InvalidSpecPackException.DEFAULT_MESSAGE);
             bf2.newLine();
             bf2.write(InvalidTruckException.DEFAULT_MESSAGE);
             bf2.newLine();
-       }
+       
+       bf2.flush();
+       bf2.close();
  }
       catch(IOException IOE){
       System.out.println(IOE);
