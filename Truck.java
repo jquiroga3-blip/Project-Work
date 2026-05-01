@@ -11,7 +11,6 @@ public class Truck{
     private double maxVolume;//this and the max weight is determined by the truck used 
     private ArrayList<Pack> pack;
     private int hoursUsed;// this will get calculated and updated 
-    private int companiesStoppedAt;
     
     private static final int smallTruck=1;
     private static final int medTruck=2;
@@ -112,7 +111,6 @@ public void setPack(ArrayList<Pack> newPack){
     }
 }
 
-
 //methods needed 
 public boolean addPackage (Pack newPack){
     if(newPack==null){
@@ -121,17 +119,19 @@ public boolean addPackage (Pack newPack){
     else if(newPack.getWeight()+currentWeight<=maxWeight && 
             newPack.getVolume()+currentVolume<=maxVolume){
         pack.add(newPack);
+        // here we are updfating the weights and volume of the trucks 
         currentWeight= currentWeight+ newPack.getWeight();
         currentVolume= currentVolume+ newPack.getVolume();
         return true;
     }
     else{
+        //return false if no more packages fit inside the truck and lets us know that we need to create another truck
         return false;
     }
 }
 
 public int calculateHoursUsed(){
-    if(pack.size()==0){
+    if(pack.size()==0){// where .size() is a method from the arraylist thing 
         hoursUsed=0;//no packs no hours 
         return 0;
     }
@@ -152,7 +152,7 @@ public int calculateHoursUsed(){
         }
         else{// this is if the zone is already in the list sop we just add the company under that zone 
             ArrayList<String> currentZoneList= companiesInZone.get(index);
-            if(!currentZoneList.contains(company)){// saying is the comp is not on their then add it 
+            if(!currentZoneList.contains(company)){// saying the comp is not on their then add it 
                 currentZoneList.add(company);
             }
         }
@@ -160,10 +160,10 @@ public int calculateHoursUsed(){
     //now based on this we can do the hours used calculation 
     int hours=0;
     for(int i=0; i< zones.size(); i++){
-        int numCompanies= companiesInZone.get(i).size();
+        int numCompanies= companiesInZone.get(i).size();// getting the number of compainies in the zone  
         int stopsMade= 5-i;
         if(stopsMade < 1){
-        stopsPerHour = 1;
+        stopsMade = 1;
         }
         int hoursForZone=0;
         while(numCompanies >0){
