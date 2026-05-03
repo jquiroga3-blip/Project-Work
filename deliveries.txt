@@ -1,16 +1,138 @@
 Truck ID: 1 Truck Type: 1
-Current Weight: 1985.0 Current Volume: 905.0
-Hours Used: 9
-ID:1 Company:Exxon Mobil Zone:F7 Date:3/14/2023 Weight:339 Volume:112
-ID:2 Company:Exxon Mobil Zone:I2 Date:3/13/2023 Weight:335 Volume:100
-ID:3 Company:Pfizer Zone:P3 Date:3/17/2023 Weight:150 Volume:45 Time:10
-ID:4 Company:United Health Group Zone:X3 Date:3/15/2023 Weight:197 Volume:114 Time:14
-ID:5 Company:JP Morgan Chase Zone:Z5 Date:3/13/2023 Weight:89 Volume:87
-ID:6 Company:Coca-Cola Company Zone:I8 Date:3/16/2023 Weight:255 Volume:149 Time:13
-ID:7 Company:Procter & Gamble Zone:V6 Date:3/13/2023 Weight:338 Volume:47
-ID:9 Company:Alphabet Class A Zone:E9 Date:3/16/2023 Weight:196 Volume:194
-ID:10 Company:Alphabet Class C Zone:P8 Date:3/15/2023 Weight:86 Volume:57
+Current Weight: 1989.0 Current Volume: 950.0
+Hours Used: 11
+ID:1 Company:Alphabet Class A Zone:L4 Date:3/17/2023 Weight:107 Volume:75 Time:10
+ID:2 Company:Berkshire Hathaway Class B Zone:Y5 Date:3/14/2023 Weight:126 Volume:38 Time:9
+ID:3 Company:Chevron Corporation Zone:I6 Date:3/16/2023 Weight:140 Volume:103 Time:11
+ID:4 Company:Berkshire Hathaway Class B Zone:V7 Date:3/13/2023 Weight:231 Volume:38
+ID:5 Company:Amazon Zone:K9 Date:3/15/2023 Weight:285 Volume:160 Time:14
+ID:6 Company:Amazon Zone:S2 Date:3/15/2023 Weight:198 Volume:28 Time:11
+ID:7 Company:Procter & Gamble Zone:J7 Date:3/17/2023 Weight:222 Volume:140 Time:11
+ID:8 Company:Chevron Corporation Zone:M4 Date:3/15/2023 Weight:188 Volume:47
+ID:9 Company:Tesla Zone:X1 Date:3/13/2023 Weight:300 Volume:87
+ID:10 Company:PepsiCo Zone:O1 Date:3/17/2023 Weight:113 Volume:170
+ID:80 Company:Mastercard Inc. Class A Zone:M8 Date:3/16/2023 Weight:79 Volume:64 Time:12
 Truck ID: 2 Truck Type: 1
-Current Weight: 332.0 Current Volume: 167.0
-Hours Used: 1
-ID:8 Company:Amazon Zone:Q9 Date:3/13/2023 Weight:332 Volume:167 Time:11
+Current Weight: 1765.0 Current Volume: 998.0
+Hours Used: 7
+ID:11 Company:Bank of America Zone:A4 Date:3/17/2023 Weight:349 Volume:123
+ID:12 Company:AbbVie Inc. Zone:A9 Date:3/13/2023 Weight:289 Volume:61 Time:15
+ID:13 Company:AbbVie Inc. Zone:M8 Date:3/13/2023 Weight:284 Volume:183 Time:16
+ID:14 Company:Chevron Corporation Zone:R6 Date:3/17/2023 Weight:229 Volume:203
+ID:15 Company:Apple Zone:Z8 Date:3/17/2023 Weight:328 Volume:106 Time:11
+ID:16 Company:AbbVie Inc. Zone:A6 Date:3/13/2023 Weight:126 Volume:166
+ID:19 Company:Procter & Gamble Zone:A3 Date:3/13/2023 Weight:160 Volume:156
+Truck ID: 3 Truck Type: 1
+Current Weight: 1200.0 Current Volume: 985.0
+Hours Used: 6
+ID:17 Company:Bank of America Zone:N5 Date:3/17/2023 Weight:291 Volume:219
+ID:18 Company:AbbVie Inc. Zone:A1 Date:3/16/2023 Weight:183 Volume:171 Time:9
+ID:20 Company:Apple Zone:Q6 Date:3/17/2023 Weight:310 Volume:112
+ID:21 Company:Pfizer Zone:T6 Date:3/17/2023 Weight:193 Volume:119
+ID:22 Company:Eli Lilly Zone:Q3 Date:3/17/2023 Weight:137 Volume:140 Time:14
+ID:23 Company:Procter & Gamble Zone:D6 Date:3/14/2023 Weight:86 Volume:224 Time:15
+Truck ID: 4 Truck Type: 1
+Current Weight: 1793.0 Current Volume: 998.0
+Hours Used: 7
+ID:24 Company:JPMorgan Chase Zone:Q8 Date:3/15/2023 Weight:287 Volume:75
+ID:25 Company:Visa Class A Zone:Z2 Date:3/17/2023 Weight:250 Volume:204
+ID:26 Company:Merck Zone:I5 Date:3/13/2023 Weight:346 Volume:155 Time:12
+ID:27 Company:Eli Lilly Zone:E9 Date:3/13/2023 Weight:272 Volume:31 Time:10
+ID:28 Company:Pfizer Zone:S8 Date:3/17/2023 Weight:315 Volume:185 Time:15
+ID:29 Company:JPMorgan Chase Zone:P8 Date:3/13/2023 Weight:169 Volume:125
+ID:30 Company:Home Depot Zone:X9 Date:3/17/2023 Weight:154 Volume:223
+Truck ID: 5 Truck Type: 1
+Current Weight: 1520.0 Current Volume: 987.0
+Hours Used: 6
+ID:31 Company:JPMorgan Chase Zone:D6 Date:3/14/2023 Weight:321 Volume:218
+ID:32 Company:AbbVie Inc. Zone:J4 Date:3/13/2023 Weight:198 Volume:211 Time:15
+ID:33 Company:Berkshire Hathaway Class B Zone:I6 Date:3/15/2023 Weight:169 Volume:128 Time:11
+ID:34 Company:Bank of America Zone:Y5 Date:3/13/2023 Weight:172 Volume:182 Time:15
+ID:35 Company:Procter & Gamble Zone:R2 Date:3/16/2023 Weight:334 Volume:182
+ID:37 Company:Tesla Zone:S1 Date:3/16/2023 Weight:326 Volume:66 Time:10
+Truck ID: 6 Truck Type: 1
+Current Weight: 1666.0 Current Volume: 991.0
+Hours Used: 8
+ID:36 Company:NVIDIA Zone:G8 Date:3/17/2023 Weight:213 Volume:181
+ID:38 Company:Tesla Zone:Y8 Date:3/15/2023 Weight:222 Volume:193 Time:9
+ID:39 Company:Amazon Zone:Q9 Date:3/14/2023 Weight:269 Volume:102 Time:9
+ID:40 Company:Procter & Gamble Zone:Y4 Date:3/15/2023 Weight:168 Volume:46
+ID:41 Company:UnitedHealth Group Zone:M2 Date:3/13/2023 Weight:180 Volume:70 Time:11
+ID:42 Company:Berkshire Hathaway Class B Zone:E8 Date:3/14/2023 Weight:291 Volume:161 Time:14
+ID:43 Company:AbbVie Inc. Zone:H2 Date:3/17/2023 Weight:163 Volume:167
+ID:45 Company:Visa Class A Zone:A1 Date:3/16/2023 Weight:160 Volume:71 Time:12
+Truck ID: 7 Truck Type: 1
+Current Weight: 1971.0 Current Volume: 987.0
+Hours Used: 9
+ID:44 Company:JPMorgan Chase Zone:T8 Date:3/16/2023 Weight:167 Volume:199 Time:14
+ID:46 Company:Home Depot Zone:J4 Date:3/15/2023 Weight:311 Volume:165 Time:9
+ID:47 Company:Procter & Gamble Zone:T9 Date:3/17/2023 Weight:160 Volume:107 Time:11
+ID:48 Company:JPMorgan Chase Zone:G5 Date:3/15/2023 Weight:296 Volume:126
+ID:49 Company:AbbVie Inc. Zone:J7 Date:3/14/2023 Weight:177 Volume:78
+ID:50 Company:Amazon Zone:O2 Date:3/14/2023 Weight:108 Volume:67
+ID:51 Company:PepsiCo Zone:K7 Date:3/17/2023 Weight:195 Volume:89
+ID:52 Company:Alphabet Class C Zone:Y5 Date:3/13/2023 Weight:315 Volume:50
+ID:55 Company:Merck Zone:B3 Date:3/14/2023 Weight:242 Volume:106
+Truck ID: 8 Truck Type: 1
+Current Weight: 1850.0 Current Volume: 972.0
+Hours Used: 9
+ID:53 Company:Amazon Zone:Q2 Date:3/13/2023 Weight:99 Volume:124
+ID:54 Company:Chevron Corporation Zone:B2 Date:3/15/2023 Weight:326 Volume:55 Time:13
+ID:56 Company:Johnson & Johnson Zone:S9 Date:3/14/2023 Weight:322 Volume:169 Time:16
+ID:57 Company:JPMorgan Chase Zone:M3 Date:3/16/2023 Weight:157 Volume:56 Time:12
+ID:58 Company:Mastercard Inc. Class A Zone:T5 Date:3/15/2023 Weight:236 Volume:200 Time:11
+ID:59 Company:Procter & Gamble Zone:C1 Date:3/13/2023 Weight:182 Volume:200 Time:9
+ID:60 Company:Home Depot Zone:J4 Date:3/15/2023 Weight:189 Volume:60
+ID:61 Company:Apple Zone:Z6 Date:3/13/2023 Weight:194 Volume:49
+ID:68 Company:Merck Zone:J1 Date:3/17/2023 Weight:145 Volume:59 Time:10
+Truck ID: 9 Truck Type: 1
+Current Weight: 1765.0 Current Volume: 976.0
+Hours Used: 8
+ID:62 Company:Home Depot Zone:C1 Date:3/16/2023 Weight:115 Volume:112 Time:16
+ID:63 Company:Bank of America Zone:L6 Date:3/17/2023 Weight:336 Volume:214
+ID:65 Company:Johnson & Johnson Zone:N3 Date:3/17/2023 Weight:327 Volume:216
+ID:66 Company:Amazon Zone:F2 Date:3/15/2023 Weight:326 Volume:109
+ID:67 Company:Eli Lilly Zone:L9 Date:3/16/2023 Weight:143 Volume:199 Time:13
+ID:69 Company:Amazon Zone:F1 Date:3/16/2023 Weight:177 Volume:26
+ID:70 Company:Coca-Cola Company Zone:N8 Date:3/14/2023 Weight:240 Volume:54
+ID:74 Company:Berkshire Hathaway Class B Zone:U6 Date:3/17/2023 Weight:101 Volume:46
+Truck ID: 10 Truck Type: 1
+Current Weight: 1925.0 Current Volume: 910.0
+Hours Used: 7
+ID:71 Company:JPMorgan Chase Zone:J3 Date:3/17/2023 Weight:324 Volume:152 Time:12
+ID:72 Company:Pfizer Zone:I4 Date:3/15/2023 Weight:318 Volume:130
+ID:73 Company:Meta Zone:V4 Date:3/15/2023 Weight:127 Volume:158 Time:11
+ID:75 Company:Pfizer Zone:W2 Date:3/13/2023 Weight:153 Volume:69
+ID:76 Company:Microsoft Zone:V7 Date:3/14/2023 Weight:269 Volume:200
+ID:77 Company:Pfizer Zone:W2 Date:3/16/2023 Weight:334 Volume:48
+ID:78 Company:UnitedHealth Group Zone:B6 Date:3/13/2023 Weight:277 Volume:46
+ID:79 Company:Chevron Corporation Zone:R7 Date:3/17/2023 Weight:123 Volume:107
+Truck ID: 11 Truck Type: 1
+Current Weight: 1793.0 Current Volume: 983.0
+Hours Used: 9
+ID:81 Company:Home Depot Zone:T3 Date:3/14/2023 Weight:124 Volume:35 Time:9
+ID:82 Company:Alphabet Class A Zone:Z9 Date:3/17/2023 Weight:290 Volume:30 Time:12
+ID:83 Company:Apple Zone:U7 Date:3/16/2023 Weight:177 Volume:221
+ID:84 Company:Alphabet Class C Zone:Z4 Date:3/16/2023 Weight:325 Volume:206 Time:15
+ID:85 Company:Visa Class A Zone:N1 Date:3/13/2023 Weight:305 Volume:134
+ID:86 Company:Pfizer Zone:S9 Date:3/15/2023 Weight:333 Volume:74
+ID:87 Company:Alphabet Class A Zone:Y5 Date:3/16/2023 Weight:109 Volume:48 Time:13
+ID:88 Company:Apple Zone:L9 Date:3/14/2023 Weight:54 Volume:206 Time:14
+ID:99 Company:Exxon Mobil Zone:J8 Date:3/15/2023 Weight:76 Volume:29 Time:11
+Truck ID: 12 Truck Type: 1
+Current Weight: 1539.0 Current Volume: 986.0
+Hours Used: 8
+ID:89 Company:Johnson & Johnson Zone:R3 Date:3/13/2023 Weight:202 Volume:73 Time:14
+ID:90 Company:Merck Zone:F5 Date:3/14/2023 Weight:126 Volume:156 Time:12
+ID:91 Company:Berkshire Hathaway Class B Zone:B8 Date:3/16/2023 Weight:77 Volume:223
+ID:92 Company:PepsiCo Zone:N6 Date:3/16/2023 Weight:270 Volume:107 Time:10
+ID:93 Company:Johnson & Johnson Zone:F7 Date:3/15/2023 Weight:325 Volume:59
+ID:94 Company:Alphabet Class C Zone:H4 Date:3/17/2023 Weight:162 Volume:176 Time:11
+ID:95 Company:Amazon Zone:G4 Date:3/13/2023 Weight:95 Volume:74
+ID:96 Company:Alphabet Class A Zone:L5 Date:3/15/2023 Weight:282 Volume:118
+Truck ID: 13 Truck Type: 1
+Current Weight: 720.0 Current Volume: 549.0
+Hours Used: 3
+ID:97 Company:Microsoft Zone:N3 Date:3/16/2023 Weight:177 Volume:172
+ID:98 Company:Pfizer Zone:X4 Date:3/17/2023 Weight:305 Volume:204 Time:10
+ID:100 Company:Exxon Mobil Zone:F8 Date:3/15/2023 Weight:238 Volume:173 Time:16

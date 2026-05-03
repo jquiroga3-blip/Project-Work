@@ -20,7 +20,7 @@ public static final int GET_TIME=17;
 //constructors 
 //default
 
-public Pack(){
+public Pack()throws InvalidPackException{
     setPackID();
     setCompName(DEFAULT_COMP_NAME);
     setDeliveryZone(DEFAULT_DEVIVERY_ZONE);
@@ -28,7 +28,7 @@ public Pack(){
     setWeight(DEFAULT_WEIGHT);
     setVolume(DEFAULT_VOLUME);
 }
-public Pack(String newCompName, String newDeliveryZone, Date newDeliveryDate, int newWeight, int newVolume ){
+public Pack(String newCompName, String newDeliveryZone, Date newDeliveryDate, int newWeight, int newVolume)throws InvalidPackException{
     setPackID();
     setCompName(newCompName);
     setDeliveryZone(newDeliveryZone);
@@ -65,51 +65,50 @@ public void setPackID(){
     packID= nextID++;// bc it says system generated 
 }
 
-public void setCompName(String newCompName){
+public void setCompName(String newCompName)throws InvalidPackException{
     if(newCompName ==null){
-        compName=DEFAULT_COMP_NAME;
+        throw new InvalidPackException(InvalidPackException.INVALID_COMP_NAME);
     }
     else{
         compName= newCompName;
     }
 }
 
-public void setDeliveryZone(String newDeliveryZone){
+public void setDeliveryZone(String newDeliveryZone)throws InvalidPackException{
     if(newDeliveryZone==null || !(newDeliveryZone.length()==2) ||
      !(Character.isLetter(newDeliveryZone.charAt(0))) || 
      !(Character.isDigit(newDeliveryZone.charAt(1)))){ // here we are using the char to make sure it is a letter or a digit based on the char tools thing 
-        deliveryZone=DEFAULT_DEVIVERY_ZONE;
+        throw new InvalidPackException(InvalidPackException.INVALID_ZONE);
     }
     else{
         deliveryZone= newDeliveryZone;
     }
 }
 
-public void setDeliveryDate(Date newDeliveryDate){
+public void setDeliveryDate(Date newDeliveryDate)throws InvalidPackException{
     if(newDeliveryDate==null){
-        deliveryDate = new Date();
+        throw new InvalidPackException(InvalidPackException.INVALID_DATE);
     }
     else{
     deliveryDate= new Date(newDeliveryDate);
     }
 }
 
-public void setWeight(int newWeight){
+public void setWeight(int newWeight)throws InvalidPackException{
     if(newWeight<=0){
-        weight = DEFAULT_WEIGHT;
+        throw new InvalidPackException(InvalidPackException.INVALID_WEIGHT);
     }
     else{
         weight= newWeight;
     }
 }
-public void setVolume(int newVolume){
-    if(newVolume > 0){
-        volume = newVolume;
+public void setVolume(int newVolume) throws InvalidPackException {
+    if(newVolume <= 0){
+        throw new InvalidPackException(InvalidPackException.INVALID_VOLUME);
     }
-    else{
-        volume = DEFAULT_VOLUME;
-    }
+    volume = newVolume;
 }
+
     public int compareTo(Pack other) {
 
         int zoneCompare = this.getDeliveryZone().compareTo(other.getDeliveryZone());

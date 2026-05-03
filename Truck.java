@@ -112,9 +112,9 @@ public void setPack(ArrayList<Pack> newPack){
 }
 
 //methods needed 
-public boolean addPackage (Pack newPack){
+public boolean addPackage (Pack newPack) throws InvalidTruckException{
     if(newPack==null){
-        return false;
+         throw new InvalidTruckException(InvalidTruckException.INVALID_PACK);
     } 
     else if(newPack.getWeight()+currentWeight<=maxWeight && 
             newPack.getVolume()+currentVolume<=maxVolume){
@@ -127,6 +127,7 @@ public boolean addPackage (Pack newPack){
     else{
         //return false if no more packages fit inside the truck and lets us know that we need to create another truck
         return false;
+        
     }
 }
 

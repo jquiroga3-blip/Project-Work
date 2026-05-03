@@ -6,12 +6,12 @@ public class SpecPack extends Pack {
     
     //constructors
     //default
-    public SpecPack() throws InvalidSpecPackException  {
+    public SpecPack() throws InvalidPackException,InvalidSpecPackException  {
         super();// this one calls the default one in the parent class Pack 
         setTime(DEFAULT_TIME_DEADLINE);
     }
 
-    public SpecPack(String newCompName, String newDeliveryZone, Date newDeliveryDate, int newWeight, int newVolume, int newTimeDeadline) throws InvalidSpecPackException{
+    public SpecPack(String newCompName, String newDeliveryZone, Date newDeliveryDate, int newWeight, int newVolume, int newTimeDeadline) throws InvalidPackException,InvalidSpecPackException{
         super(newCompName, newDeliveryZone, newDeliveryDate, newWeight,newVolume);
         setTime(newTimeDeadline);
     }
