@@ -21,7 +21,7 @@ public class Truck{
 //constructors
 public Truck (){
     setTruckID();
-    setTruckType(smallTruck); //the default truck is small 
+    setTruckType(medTruck); //the default truck is small 
 
     currentWeight=0;
     currentVolume=0;
@@ -54,13 +54,13 @@ public double getCurrentVolume(){
     return currentVolume;
 }
 
-/*public double getMaxWeight(){  this might not be needed bc it is determined
-    return maxWeight;               by the truck type. The setter will do this 
+public double getMaxWeight(){  
+    return maxWeight;                
 }
 
 public double getMaxVolume(){
     return maxVolume;
-}*/
+}
 
 public ArrayList<Pack> getPack(){
     return pack;
@@ -90,16 +90,17 @@ public void setTruckType(int newTruckType){
         maxWeight=4000;
         maxVolume=2000;
     }
-    else if(newTruckType==largeTruck){
+    else{
         truckType=largeTruck;
         maxWeight=8000;
         maxVolume=4000;
     }
-    else{
+    /*else{
+        (newTruckType==largeTruck)
         truckType=smallTruck;
         maxWeight=2000;
         maxVolume=1000;
-    }
+    }*/
  }
 
 public void setPack(ArrayList<Pack> newPack){
@@ -131,6 +132,24 @@ public boolean addPackage (Pack newPack) throws InvalidTruckException{
     }
 }
 
+private void sortZones(ArrayList<String> zones,  ArrayList<ArrayList<String>> companiesInZone) {
+    for (int i = 0; i < zones.size() - 1; i++) {
+        for (int j = i + 1; j < zones.size(); j++) {
+
+            if (zones.get(i).compareTo(zones.get(j)) > 0) {
+
+                String tempZone = zones.get(i);
+                zones.set(i, zones.get(j));
+                zones.set(j, tempZone);
+
+                ArrayList<String> temp = companiesInZone.get(i);
+                companiesInZone.set(i, companiesInZone.get(j));
+                companiesInZone.set(j, temp);
+            }
+        }
+    }
+}
+
 public int calculateHoursUsed(){
     if(pack.size()==0){// where .size() is a method from the arraylist thing 
         hoursUsed=0;//no packs no hours 
@@ -158,24 +177,31 @@ public int calculateHoursUsed(){
             }
         }
     }
+    sortZones(zones, companiesInZone);
     //now based on this we can do the hours used calculation 
     int hours=0;
-    for(int i=0; i< zones.size(); i++){
-        int numCompanies= companiesInZone.get(i).size();// getting the number of compainies in the zone  
-        int stopsMade= 5-i;
-        if(stopsMade < 1){
-        stopsMade = 1;
-        }
-        int hoursForZone=0;
-        while(numCompanies >0){
-            numCompanies= numCompanies-stopsMade;
+    for (int i = 0; i < zones.size(); i++) {
+        int numCompanies = companiesInZone.get(i).size();
+        int stopsAllowed;
+            if (i == 0) {
+                stopsAllowed = 5;
+            } else if (i == 1) {
+                stopsAllowed = 4;
+            } else if (i == 2) {
+                stopsAllowed = 3;
+            } else {
+                stopsAllowed = 1;
+            }
+        int hoursForZone = 0;
+        while (numCompanies > 0) {
+            numCompanies -= stopsAllowed;
             hoursForZone++;
         }
-        hours= hours+ hoursForZone;
-    }    
-    hoursUsed=hours;// this is the hours the truck used 
-    return hours;
-}
+            hours += hoursForZone;
+        }
+        hoursUsed=hours;// this is the hours the truck used 
+        return hours;
+    }
 
 public String toString(){
     return "Truck ID: "+ truckID + " Truck Type: "+ truckType + "\nCurrent Weight: "+ currentWeight + " Current Volume: "+ currentVolume + "\nHours Used: "+ hoursUsed;
