@@ -21,7 +21,7 @@ public class Truck{
 //constructors
 public Truck (){
     setTruckID();
-    setTruckType(medTruck); //the default truck is small 
+    setTruckType(smallTruck); //the default truck is small 
 
     currentWeight=0;
     currentVolume=0;
