@@ -40,13 +40,10 @@ public class PackageCollection {
 				}
 			}catch(Exception e){
 				//data.add(null);
-				errors.add( 
-         e.getClass().getSimpleName() 
-        + " - " + e.getMessage());
-    continue;
+				errors.add( e.getClass().getSimpleName() + " - " + e.getMessage());
+    			continue;
 		}
 	}
 			return data;
-
 }
 }

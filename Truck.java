@@ -132,6 +132,7 @@ public boolean addPackage (Pack newPack) throws InvalidTruckException{
     }
 }
 
+
 private void sortZones(ArrayList<String> zones,  ArrayList<ArrayList<String>> companiesInZone) {
     for (int i = 0; i < zones.size() - 1; i++) {
         for (int j = i + 1; j < zones.size(); j++) {
@@ -181,7 +182,20 @@ public int calculateHoursUsed(){
     //now based on this we can do the hours used calculation 
     int hours=0;
     for (int i = 0; i < zones.size(); i++) {
-        int numCompanies = companiesInZone.get(i).size();
+int numCompanies = companiesInZone.get(i).size();
+
+        int stopsAllowed = 5; // <-- IMPORTANT FIX (matches spec correctly)
+
+        int hoursForZone = 0;
+
+        while (numCompanies > 0) {
+            numCompanies -= stopsAllowed;
+            hoursForZone++;
+        }
+
+        hours += hoursForZone;
+
+        /*int numCompanies = companiesInZone.get(i).size();
         int stopsAllowed;
             if (i == 0) {
                 stopsAllowed = 5;
@@ -197,7 +211,7 @@ public int calculateHoursUsed(){
             numCompanies -= stopsAllowed;
             hoursForZone++;
         }
-            hours += hoursForZone;
+            hours += hoursForZone;*/
         }
         hoursUsed=hours;// this is the hours the truck used 
         return hours;

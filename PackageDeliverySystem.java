@@ -34,87 +34,13 @@ public class PackageDeliverySystem {
         }
 
         // now we must add the packs to the truck by looping 
-        int i = 0;
+    
 
-        while (i < data.size()) {
 
-            Pack first = data.get(i);
-            if (first == null) {
-                i++;
-                continue;
-            }
 
-            String currentZone = first.getDeliveryZone();
 
-            // collect all packages in same zone
-            ArrayList<Pack> zonePackages = new ArrayList<>();
 
-            while (i < data.size()
-                    && data.get(i) != null
-                    && data.get(i).getDeliveryZone().equals(currentZone)) {
-
-                zonePackages.add(data.get(i));
-                i++;
-            }
-
-            // process this zone
-            while (!zonePackages.isEmpty()) {
-
-                Truck truck = new Truck(3); // start with large truck
-
-                Iterator<Pack> it = zonePackages.iterator();
-
-                while (it.hasNext()) {
-                    Pack p = it.next();
-
-                    try {
-                        if (truck.addPackage(p)) {
-                            it.remove();
-                        }
-                    } catch (InvalidTruckException e) {
-                        bf2.write(e.getMessage());
-                        bf2.newLine();
-                    }
-                }
-                if (truck.getCurrentVolume() <= 1000 &&
-                    truck.getCurrentWeight() <= 2000) {
-
-                    Truck small = new Truck(1);
-
-                    for (Pack p : truck.getPack()) {
-                        try {
-                            small.addPackage(p);
-                        } catch (InvalidTruckException e) {
-                            bf2.write(e.getMessage());
-                            bf2.newLine();
-                        }
-                    }
-
-                    trucksBeingUsed.add(small);
-
-                } else if (truck.getCurrentVolume() <= 2000 &&
-                           truck.getCurrentWeight() <= 4000) {
-
-                    Truck medium = new Truck(2);
-
-                    for (Pack p : truck.getPack()) {
-                        try {
-                            medium.addPackage(p);
-                        } catch (InvalidTruckException e) {
-                            bf2.write(e.getMessage());
-                            bf2.newLine();
-                        }
-                    }
-
-                    trucksBeingUsed.add(medium);
-
-                } else {
-                    trucksBeingUsed.add(truck);
-                }
-            }
-        }
-
-        /*for(Pack packages: data){
+        for(Pack packages: data){
             
             if(packages == null){
                 bf2.write("Invalid package skipped from file");
@@ -135,10 +61,10 @@ public class PackageDeliverySystem {
                     bf2.newLine();
                  }
                 }
-
+// EVERYTHING ABPUVE THIS COMMENT IS GOOD
             //here we are saying that if no packages can be added to the truck then we have to make a new truck and then
             //add the packages to the new truck
-
+                //THIS CODE BELOW IS WHERE THE LOGIC GOES TO PUT THE PACKAGES IN THE TRUCK 
             if (!packagesAdded) {
                 Truck newTruck;
 
@@ -160,14 +86,14 @@ public class PackageDeliverySystem {
                     bf2.newLine();
                 }
             }
-        }*/
+        }
 
 
 
 
 
 
-
+//EVERYTHING BELOW THIS COMMENT IS GOOD
         //now we calculate the truck hours as said in the project and 
         //out put to the files it said to 
         //we add counters to make it easier to calculate the actual truckHours
@@ -183,8 +109,8 @@ public class PackageDeliverySystem {
 
         for(Truck trucks: trucksBeingUsed){
             trucks.calculateHoursUsed();//from truck class
-            int truckHours=trucks.getHoursUsed();
 
+            int truckHours=trucks.getHoursUsed();
             if(trucks.getTruckType()==1){
                 small++;
                 totalTruckHours= totalTruckHours+ (1*truckHours);

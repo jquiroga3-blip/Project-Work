@@ -109,7 +109,7 @@ public void setVolume(int newVolume) throws InvalidPackException {
     volume = newVolume;
 }
 
-    public int compareTo(Pack other) {
+ public int compareTo(Pack other) {
 
         int zoneCompare = this.getDeliveryZone().compareTo(other.getDeliveryZone());
         if (zoneCompare != 0) {
