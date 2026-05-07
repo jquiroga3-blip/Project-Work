@@ -182,20 +182,8 @@ public int calculateHoursUsed(){
     //now based on this we can do the hours used calculation 
     int hours=0;
     for (int i = 0; i < zones.size(); i++) {
-int numCompanies = companiesInZone.get(i).size();
 
-        int stopsAllowed = 5; // <-- IMPORTANT FIX (matches spec correctly)
-
-        int hoursForZone = 0;
-
-        while (numCompanies > 0) {
-            numCompanies -= stopsAllowed;
-            hoursForZone++;
-        }
-
-        hours += hoursForZone;
-
-        /*int numCompanies = companiesInZone.get(i).size();
+        int numCompanies = companiesInZone.get(i).size();
         int stopsAllowed;
             if (i == 0) {
                 stopsAllowed = 5;
@@ -211,7 +199,7 @@ int numCompanies = companiesInZone.get(i).size();
             numCompanies -= stopsAllowed;
             hoursForZone++;
         }
-            hours += hoursForZone;*/
+            hours += hoursForZone;
         }
         hoursUsed=hours;// this is the hours the truck used 
         return hours;
